@@ -23,10 +23,10 @@ public class Main {
             int winCount = 0;
             int loseCount = 0;
             
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 100; i++)
             {
             	String name = "Fred";
-            	int balance = 50;
+            	int balance = 100;
             	int limit = 0;
                 player = new Player(name, balance);
                 player.setLimit(limit);
