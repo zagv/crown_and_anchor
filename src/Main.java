@@ -46,7 +46,7 @@ public class Main {
                 {
                     turn++;                    
                 	DiceValue pick = DiceValue.getRandom();
-                   
+                    
                 	System.out.printf("Turn %d: %s bet %d on %s\n",
                 			turn, player.getName(), bet, pick); 
                 	
