@@ -38,12 +38,15 @@ public class Game {
 				matches += 1;
 			}
 		}
-		
+		/**
+			Bug1 fixed, if the player wins gets points.
+		*/
 		int winnings = matches * bet;
 
 		if (matches > 0) {			
 			player.receiveWinnings(winnings + bet);
 		}
+
 		
         return winnings;		
 	}
