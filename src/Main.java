@@ -23,10 +23,10 @@ public class Main {
             int winCount = 0;
             int loseCount = 0;
             
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 50; i++)
             {
             	String name = "Fred";
-            	int balance = 100;
+            	int balance = 50;
             	int limit = 0;
                 player = new Player(name, balance);
                 player.setLimit(limit);
@@ -52,7 +52,7 @@ public class Main {
                     		cdv.get(0), cdv.get(1), cdv.get(2));
                     
                     if (winnings > 0) {
-                        player.receiveWinnings(winnings);
+                        //player.receiveWinnings(winnings);
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, player.getBalance());
 	                	winCount++; 
