@@ -28,7 +28,7 @@ public class Main {
             int winCount = 0;
             int loseCount = 0;
             
-            for (int i = 0; i < 50; i++)
+            for (int i = 1; i <= 50; i++)
             {
             	String name = "Fred";
             	int balance = 50;
