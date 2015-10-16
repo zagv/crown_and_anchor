@@ -57,7 +57,6 @@ public class Main {
                      * @author vuq.
                      * **/
                     if (winnings > 0) {
-//                        player.receiveWinnings(winnings);
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, player.getBalance());
 	                	winCount++; 
