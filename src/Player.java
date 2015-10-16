@@ -26,6 +26,13 @@ public class Player {
 		return (balance > limit);
 	}
 	
+	/**
+	 * Date: 16 Oct 2016
+	 * @Author: vuq
+	 * Description: Fix #Bug 2: Player cannot reach betting limit:
+	 *Limit set to 0, but game ends with player still with 5 (dollars) remaining.
+	 * Code: (balance - amount) should greater, equal limit instead of just greater than limit.
+	 * **/
 	public boolean balanceExceedsLimitBy(int amount) {
 		return (balance - amount >= limit);
 	}
