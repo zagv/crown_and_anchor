@@ -50,7 +50,12 @@ public class Main {
                     
                     System.out.printf("Rolled %s, %s, %s\n",
                     		cdv.get(0), cdv.get(1), cdv.get(2));
-                    
+                    /**
+                     * This is to fix bug 1:
+                     * Some one add player.receiveWinnings(winnings). But it generate another bug: the game end when it has not reach the balance limit
+                     * So I comment it out
+                     * @author vuq.
+                     * **/
                     if (winnings > 0) {
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, player.getBalance());
