@@ -19,15 +19,20 @@ public class Main {
         int totalWins = 0;
         int totalLosses = 0;
 
-        while (true)
-        {
+
+        /**
+            removed the while loop, because it was waiting for input from the keyboard
+            like this when the game is finished, it will exit the program automatically
+        */
+       // while (true)
+        //{
             int winCount = 0;
             int loseCount = 0;
             
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 50; i++)
             {
             	String name = "Fred";
-            	int balance = 100;
+            	int balance = 50;
             	int limit = 0;
                 player = new Player(name, balance);
                 player.setLimit(limit);
@@ -47,7 +52,7 @@ public class Main {
                 {
                     turn++;                    
                 	DiceValue pick = DiceValue.getRandom();
-                   
+                    
                 	System.out.printf("Turn %d: %s bet %d on %s\n",
                 			turn, player.getName(), bet, pick); 
                 	
@@ -63,7 +68,6 @@ public class Main {
                      * @author vuq.
                      * **/
                     if (winnings > 0) {
-//                        player.receiveWinnings(winnings);
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, player.getBalance());
 	                	winCount++; 
@@ -85,9 +89,9 @@ public class Main {
             totalWins += winCount;
             totalLosses += loseCount;
 
-            String ans = console.readLine();
-            if (ans.equals("q")) break;
-        } //while true
+            //String ans = console.readLine();
+           // if (ans.equals("q")) break;
+       // } //while true
         
         System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
 	}
