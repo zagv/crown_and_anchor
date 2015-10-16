@@ -10,7 +10,7 @@ public class Game {
 	public Game(Dice die1, Dice die2, Dice die3) {
 		if (die1 == null || die2 == null || die3 == null) throw new IllegalArgumentException("Dice cannot be null.");
 		dice = new ArrayList<Dice>();
-		dice.add(die1);
+       		dice.add(die1);
 		dice.add(die2);
 		dice.add(die3);
 		values = new ArrayList<DiceValue>();
@@ -19,7 +19,8 @@ public class Game {
 	public List<DiceValue> getDiceValues() {
 		values.clear();
 		for (Dice d : dice) {
-			values.add(d.getValue());
+                   
+			values.add(d.roll());
 		}
 		return Collections.unmodifiableList(values);
 	}	
@@ -33,7 +34,7 @@ public class Game {
 		    
 		int matches = 0;
 		for ( Dice d : dice) {
-			d.roll();
+			
 			if (d.getValue().equals(pick)) { 
 				matches += 1;
 			}
