@@ -22,7 +22,8 @@ public enum DiceValue {
 	}
 	
 	public static DiceValue getRandom() {
-		int random = RANDOM.nextInt(DiceValue.SPADE.ordinal());
+		// Previously Spade was not showing at all, now also Spade is showing in the dice value.
+		int random = RANDOM.nextInt(6);
 		return values()[random];
 	}
 	
