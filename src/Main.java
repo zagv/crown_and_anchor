@@ -5,13 +5,28 @@ public class Main {
 	
 	public static void main(String[] args) throws Exception {
 		
-	   BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
+	   
+           BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+           System.out.print("Enter Your Name:");
+            String input = br.readLine();
+            System.out.print("Enter Your Age:");
+           String input2 = br.readLine();
+           int age=Integer.parseInt(input2);
+           
+           if (age<18)
+           {
+               System.out.print("Only 18+ allowed.....Sorryyy!!!!");
+               System.exit(12);
+           }
+           else
+           {
+               
 
         Dice d1 = new Dice();
         Dice d2 = new Dice();
         Dice d3 = new Dice();
         
-        Player player = new Player("Fred", 100);
+        Player player = new Player(input, 100);
         Game game = new Game(d1, d2, d3);
         List<DiceValue> cdv = game.getDiceValues();
 
@@ -30,7 +45,7 @@ public class Main {
             
             for (int i = 1; i <= 50; i++)
             {
-            	String name = "Fred";
+            	String name = input;
             	int balance = 50;
             	int limit = 0;
                 player = new Player(name, balance);
@@ -89,5 +104,6 @@ public class Main {
         
         System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
 	}
+        }
 
 }
