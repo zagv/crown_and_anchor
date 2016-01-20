@@ -22,8 +22,7 @@ public enum DiceValue {
 	}
 	
 	public static DiceValue getRandom() {
-		// Previously Spade was not showing at all, now also Spade is showing in the dice value.
-		int random = RANDOM.nextInt(6);
+		int random = RANDOM.nextInt(VALUE_REPR_MAP.size());
 		return values()[random];
 	}
 	

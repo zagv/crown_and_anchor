@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Scanner;
 import java.io.*;
 
 public class Main {
@@ -50,8 +51,13 @@ public class Main {
             	int limit = 0;
                 player = new Player(name, balance);
                 player.setLimit(limit);
+                
                 int bet = 5;
-
+                Scanner  scan = new Scanner(System.in);
+                System.out.println("Please enter amount you wanna bet:\n");
+                bet = scan.nextInt();
+                scan.nextLine();
+                
                 System.out.println(String.format("Start Game %d: ", i));
                 System.out.println(String.format("%s starts with balance %d, limit %d", 
                 		player.getName(), player.getBalance(), player.getLimit()));
